@@ -24,7 +24,7 @@ modules/
 Resource Group
 ├── Virtual Network (192.168.0.0/16)
 │   ├── vm-subnet          (192.168.1.0/24)  ← NICs for all VMs
-│   └── AzureBastionSubnet (192.168.0.0/26)  ← Bastion only
+│   └── AzureBastionSubnet (192.168.0.0/27)  ← Bastion only
 │
 ├── Azure Bastion + Public IP                 ← Secure RDP, no public VM IPs
 │
@@ -97,7 +97,7 @@ This deploys the defaults: **two VMs** (`vm-001`, `vm-002`), both backed up dail
 | `vmSubnetAddressPrefix` | string | `192.168.1.0/24` | Address prefix for the VM subnet |
 | `bastionHostName` | string | `bastion-<hash>` | Name of the Bastion host |
 | `bastionPublicIpName` | string | `pip-bastion-<hash>` | Name of the Bastion public IP |
-| `bastionSubnetAddressPrefix` | string | `192.168.0.0/26` | Address prefix for AzureBastionSubnet (min /26) |
+| `bastionSubnetAddressPrefix` | string | `192.168.0.0/27` | Address prefix for AzureBastionSubnet (min /26) |
 | `storageAccountName` | string | `sa<hash>` | Name of the boot diagnostics storage account |
 | `vaultName` | string | `rsv-<hash>` | Name of the Recovery Services Vault |
 | `backupTime` | string | `2025-01-01T02:00:00Z` | Daily backup window (UTC) |
